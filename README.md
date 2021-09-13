@@ -1,4 +1,4 @@
-# Project name or Logo
+# 국방 휴가 체계
 ![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)
 
 프로젝트명 또는 프로젝트 로고 이미지 **(택1)**
