@@ -4,9 +4,9 @@
 프로젝트명 또는 프로젝트 로고 이미지 **(택1)**
 
 ## 프로잭트 소개
-- 군생활을 하면서 휴가의 종류는 어떤 것들이 있으며, 어떤 것들을 받았고, 얼마나 남아있는지를 한번에 파악하기가 어렵습니다.
-- 휴가를 신청 할 때에는 매번 양식에 맞게 표를 만들고 메일로 보내 확인을 받고 답을 받는 등 복잡한 절차가 필요합니다.
-- 이러한 불편함들은 한눈에 휴가 관련 데이터들을 볼 수 있고, 휴가 신청 및 종합이 가능한 국방 휴가 체계가 해결해 줄 것입니다. 
+- 군생활을 하면서 휴가를 한번에 파악하기가 어렵지 않습니까?
+- 휴가를 신청 할 때 복잡한 절차로 인해 귀찮지 않으십니까?
+- 이러한 불편함들은 국방 휴가 체계가 해결해 줄 것입니다. 
 
 
 ## 기능 설명
@@ -45,7 +45,7 @@ $ yarn start or npm run start
  샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
 ## 팀 정보 (Team Information)
-- Park Chanhee (qkrcksgml56@naver.com), Github Id: pch720
+- 박찬희 (qkrcksgml56@naver.com), Github Id: pch720
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
