@@ -11,8 +11,10 @@
  - 설명 기입
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
-* ECMAScript 6 지원 브라우저 사용
-* 권장: Google Chrome 버젼 77 이상
+
+**Google Chrome [83.0.4103.116(공식 빌드) (64비트)]**
+- [x] ECMAScript 6 지원 브라우저
+- [x] Google Chrome 버전 77 이상
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
