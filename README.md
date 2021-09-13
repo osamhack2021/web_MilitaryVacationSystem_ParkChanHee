@@ -48,6 +48,6 @@ $ yarn start or npm run start
 - 박찬희 (qkrcksgml56@naver.com), Github Id: pch720
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
- * [MIT](https://github.com/osamhack2021/web_MilitaryVacationSystem_ParkChanHee/license.md)
+ * [MIT](https://github.com/osamhack2021/web_MilitaryVacationSystem_ParkChanHee/blob/main/LICENSE)
 
 This project is licensed under the terms of the MIT license.
