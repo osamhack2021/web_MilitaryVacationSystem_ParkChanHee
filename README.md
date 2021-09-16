@@ -30,6 +30,13 @@
  -  react.js, vue.js 등 사용한 front-end 프레임워크 
  -  UI framework
  - 기타 사용한 라이브러리
+ 
+## 설치 안내 (Installation Process)
+```bash
+$ git clone git주소
+$ yarn or npm install
+$ yarn start or npm run start
+```
 
 ## 프로젝트 사용법 (Getting Started)
 **마크다운 문법을 이용하여 자유롭게 기재**
