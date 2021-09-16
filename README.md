@@ -1,5 +1,5 @@
-# 국방 휴가 체계
-![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)
+# <img src=https://github.com/osamhack2021/web_MilitaryVacationSystem_ParkChanHee/blob/main/WEB/mnd_logo_signature.gif height=35px;> 국방 휴가 체계
+
 
 ## 프로잭트 소개
 > 군생활을 하면서 휴가를 한번에 파악하기가 어렵지 않습니까?<br/>
@@ -8,7 +8,9 @@
 
 
 ## 기능 설명
- - 설명 기입
+ - 받거나 사용한 휴가를 한눈에 확인 할 수 있습니다.
+ - 휴가를 간단한 절차로 신청 할 수 있습니다.
+ - 휴가 승인 또한 비교적 쉽게 할 수 있습니다.
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 
@@ -18,21 +20,16 @@
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
+ >팀원과 회의 후 수정하겠습니다.
  - nodejs, php, java 등 서버 언어 버전 
  - express, laravel, sptring boot 등 사용한 프레임워크 
  - DB 등 사용한 다른 프로그램 
  
 ### Front-end
+ >팀원과 회의 후 수정하겠습니다.
  -  react.js, vue.js 등 사용한 front-end 프레임워크 
  -  UI framework
  - 기타 사용한 라이브러리
-
-## 설치 안내 (Installation Process)
-```bash
-$ git clone git주소
-$ yarn or npm install
-$ yarn start or npm run start
-```
 
 ## 프로젝트 사용법 (Getting Started)
 **마크다운 문법을 이용하여 자유롭게 기재**
