@@ -20,27 +20,24 @@
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
- >팀원과 회의 후 수정하겠습니다.
- - nodejs, php, java 등 서버 언어 버전 
- - express, laravel, sptring boot 등 사용한 프레임워크 
- - DB 등 사용한 다른 프로그램 
+ - React.js, npm
+ - Rdbms 기반의 MySql 데이터베이스
  
 ### Front-end
- >팀원과 회의 후 수정하겠습니다.
- -  react.js, vue.js 등 사용한 front-end 프레임워크 
- -  UI framework
- - 기타 사용한 라이브러리
+ -  React.js를 사용한 front-end 프레임워크 
+ -  Bootstrap 라이브러리
+ -  Fullcalander 라이브러리
  
 ## 설치 안내 (Installation Process)
 ```bash
-$ git clone git주소
+$ git clone git https://github.com/osamhack2021/web_MilitaryVacationSystem_ParkChanHee.git
 $ yarn or npm install
 $ yarn start or npm run start
 ```
 
 ## 프로젝트 사용법 (Getting Started)
 **마크다운 문법을 이용하여 자유롭게 기재**
-
+>개발 후 수정하겠습니다.
 잘 모를 경우
 구글 검색 - 마크다운 문법
 [https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017](https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017)
@@ -50,7 +47,7 @@ $ yarn start or npm run start
  
 ## 팀 정보 (Team Information)
 - 박찬희 (qkrcksgml56@naver.com), Github Id: pch720
-
+- 김지훈 (rhgus862@g.skku.edu), Github Id: znznznxn
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osamhack2021/web_MilitaryVacationSystem_ParkChanHee/blob/main/LICENSE)
 
