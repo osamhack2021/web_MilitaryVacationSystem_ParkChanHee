@@ -20,7 +20,7 @@
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
- - React.js, npm
+ - React.js, express
  - Rdbms 기반의 MySql 데이터베이스
  
 ### Front-end
