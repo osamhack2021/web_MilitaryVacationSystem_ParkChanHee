@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "views/Home.js";
 import Project from "views/Project.js";
 import Sample from "views/Sample.js";
-
+import Login from "views/examples/Login"
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -30,6 +30,11 @@ ReactDOM.render(
         path="/sample"
         exact
         render={props => <Sample {...props} />}
+      />
+      <Route
+        path="/login"
+        exact
+        render={props => <Login {...props} />}
       />
       <Redirect to="/" />
     </Switch>

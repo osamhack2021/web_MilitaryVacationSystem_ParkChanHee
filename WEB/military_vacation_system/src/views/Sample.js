@@ -25,26 +25,26 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
-import Hero from "components/IndexSections/Hero.js";
-import Buttons from "components/IndexSections/Buttons.js";
-import Inputs from "components/IndexSections/Inputs.js";
-import CustomControls from "components/IndexSections/CustomControls.js";
-import Menus from "components/IndexSections/Menus.js";
-import Navbars from "components/IndexSections/Navbars.js";
-import Tabs from "components/IndexSections/Tabs.js";
-import Progress from "components/IndexSections/Progress.js";
-import Pagination from "components/IndexSections/Pagination.js";
-import Pills from "components/IndexSections/Pills.js";
-import Labels from "components/IndexSections/Labels.js";
-import Alerts from "components/IndexSections/Alerts.js";
-import Typography from "components/IndexSections/Typography.js";
-import Modals from "components/IndexSections/Modals.js";
-import Datepicker from "components/IndexSections/Datepicker.js";
-import TooltipPopover from "components/IndexSections/TooltipPopover.js";
-import Carousel from "components/IndexSections/Carousel.js";
-import Icons from "components/IndexSections/Icons.js";
-import Login from "components/IndexSections/Login.js";
-import Download from "components/IndexSections/Download.js";
+import Hero from "./IndexSections/Hero.js";
+import Buttons from "./IndexSections/Buttons.js";
+import Inputs from "./IndexSections/Inputs.js";
+import CustomControls from "./IndexSections/CustomControls.js";
+import Menus from "./IndexSections/Menus.js";
+import Navbars from "./IndexSections/Navbars.js";
+import Tabs from "./IndexSections/Tabs.js";
+import Progress from "./IndexSections/Progress.js";
+import Pagination from "./IndexSections/Pagination.js";
+import Pills from "./IndexSections/Pills.js";
+import Labels from "./IndexSections/Labels.js";
+import Alerts from "./IndexSections/Alerts.js";
+import Typography from "./IndexSections/Typography.js";
+import Modals from "./IndexSections/Modals.js";
+import Datepicker from "./IndexSections/Datepicker.js";
+import TooltipPopover from "./IndexSections/TooltipPopover.js";
+import Carousel from "./IndexSections/Carousel.js";
+import Icons from "./IndexSections/Icons.js";
+import Login from "./IndexSections/Login.js";
+import Download from "./IndexSections/Download.js";
 
 class Sample extends React.Component {
   componentDidMount() {
