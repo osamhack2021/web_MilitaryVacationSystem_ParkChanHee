@@ -50,7 +50,7 @@ $ yarn start or npm run start
  
 ## 팀 정보 (Team Information)
 - 박찬희 (qkrcksgml56@naver.com), Github Id: pch720
-
+- 김지훈 (rhgus862@g.skku.edu), Github Id: znznznxn
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osamhack2021/web_MilitaryVacationSystem_ParkChanHee/blob/main/LICENSE)
 
