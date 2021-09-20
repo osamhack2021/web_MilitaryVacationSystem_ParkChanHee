@@ -25,6 +25,22 @@ class Home extends React.Component {
       }
     
       handleCreate = () => {
+        /* 익스프레스 통신 시작 */
+        console.log("익스프레스 통신 시작")
+        const post ={
+          plzid : this.state.input,
+        };
+        
+        fetch("https://web-militaryvacationsystem-parkchanhee-455px95j3p75-3001.githubpreview.dev/idplz", {
+          method : "post", // 통신방법
+          headers : {
+            "content-type" : "application/json",
+          },
+          body : JSON.stringify(post),
+        });
+        console.log("익스프레스 통신 끝")
+        /* 익스프레스 통신 끝 */
+
         const { input, todos } = this.state;
         this.setState({
           input: '', // 인풋 비우고
