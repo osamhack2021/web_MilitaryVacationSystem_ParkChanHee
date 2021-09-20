@@ -20,7 +20,7 @@
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
- - React.js, express
+ - React.js, npm
  - Rdbms 기반의 MySql 데이터베이스
  
 ### Front-end
@@ -43,7 +43,7 @@ $ yarn start or npm run start
 [https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017](https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017)
 
  편한 마크다운 에디터를 찾아서 사용
- 샘플 에디터 [https://stackedit.io/app#](https://jane-aeiou.tistory.com/28?category=889920)
+ 샘플 에디터 [https://stackedit.io/app#](https://velopert.com/3480)
  
 ## 팀 정보 (Team Information)
 - 박찬희 (qkrcksgml56@naver.com), Github Id: pch720
