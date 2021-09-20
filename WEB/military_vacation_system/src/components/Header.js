@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  Container, Row, Col, Navbar, Nav,
-  NavLink, NavItem
-} from 'reactstrap';
+import {Container, Navbar} from 'reactstrap';
 
 
 class Header extends React.Component {
