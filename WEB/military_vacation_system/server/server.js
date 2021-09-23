@@ -18,8 +18,10 @@ app.get('/', (req, res) =>{
 
 app.post("/test", (req,res) =>{
     console.log('리액트에서 접근 성공!')
-    const test1 = req.test;
+    const test1 = req.body.test;
+    const result = req.body.result;
     console.log(test1);
+    console.log(result);
 });
 
 
