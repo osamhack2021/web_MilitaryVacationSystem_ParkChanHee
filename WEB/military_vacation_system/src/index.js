@@ -5,9 +5,6 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from "views/Home.js";
-import Project from "views/Project.js";
-import Sample from "views/Sample.js";
-import Login from "views/examples/Login"
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -20,21 +17,6 @@ ReactDOM.render(
         path="/home" 
         exact 
         render={props => <Home {...props} />} 
-      />
-      <Route
-        path="/project"
-        exact
-        render={props => <Project {...props} />}
-      />
-      <Route
-        path="/sample"
-        exact
-        render={props => <Sample {...props} />}
-      />
-      <Route
-        path="/login"
-        exact
-        render={props => <Login {...props} />}
       />
       <Redirect to="/" />
     </Switch>

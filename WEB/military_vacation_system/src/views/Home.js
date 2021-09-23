@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
+import axios from 'axios';
 
 import Header from 'components/Header';
 import HomeDetail from 'components/HomeDetail';
 import Form from 'components/Form';
 import TodoItemList from 'components/TodoItemList';
-
 class Home extends React.Component {
 
     id = 3 // 이미 0,1,2 가 존재하므로 3으로 설정
@@ -18,29 +18,14 @@ class Home extends React.Component {
       ]
     }
 
-    handleChange = (e) => {
-        this.setState({
-          input: e.target.value // input 의 다음 바뀔 값
-        });
-      }
+      handleChange = (e) => {
+          this.setState({
+            input: e.target.value // input 의 다음 바뀔 값
+          });
+        }
     
       handleCreate = () => {
-        /* 익스프레스 통신 시작 */
-        console.log("익스프레스 통신 시작")
-        const post ={
-          plzid : this.state.input,
-        };
         
-        fetch("https://web-militaryvacationsystem-parkchanhee-455px95j3p75-3001.githubpreview.dev/idplz", {
-          method : "post", // 통신방법
-          headers : {
-            "content-type" : "application/json",
-          },
-          body : JSON.stringify(post),
-        });
-        console.log("익스프레스 통신 끝")
-        /* 익스프레스 통신 끝 */
-
         const { input, todos } = this.state;
         this.setState({
           input: '', // 인풋 비우고
@@ -51,7 +36,12 @@ class Home extends React.Component {
             checked: false
           })
         });
+        //데이터 전송
+        fetch('/api')
+            .then(res=>res.json())
+            .then(data=>this.setState({username:data.username}));
       }
+      
     
       handleKeyPress = (e) => {
         // 눌려진 키가 Enter 면 handleCreate 호출
