@@ -5,7 +5,7 @@ const HomeDetail = ({form, children}) => {
     return (
       <main className="todo-list-template">
         <div className="title">
-          오늘 할 일
+          휴가 등록
         </div>
         <section className="form-wrapper">
           {form}

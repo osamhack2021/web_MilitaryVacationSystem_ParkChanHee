@@ -11,6 +11,7 @@
     "classnames": "2.2.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-middleware": "^3.4.2",
     "headroom.js": "0.11.0",
     "http-proxy-middleware": "^2.0.1",
     "moment": "^2.29.1",
@@ -34,7 +35,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy":"https://web-militaryvacationsystem-parkchanhee-455px95j3p75-3001.githubpreview.dev/",
   "eslintConfig": {
     "extends": [
       "react-app",

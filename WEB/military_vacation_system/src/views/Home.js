@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import axios from 'axios';
 
 import Header from 'components/Header';
@@ -7,14 +7,16 @@ import Form from 'components/Form';
 import TodoItemList from 'components/TodoItemList';
 class Home extends React.Component {
 
-    id = 3 // 이미 0,1,2 가 존재하므로 3으로 설정
+    id = 5 // 이미 0,1,2 가 존재하므로 3으로 설정
 
     state = {
       input: '',
       todos: [
-        { id: 0, text: ' 리액트 공부', checked: true },
-        { id: 1, text: ' 해커톤', checked: false },
-        { id: 2, text: ' 운동', checked: false }
+        { id: 0, text: ' 1차 정기 휴가(정기)', checked: true },
+        { id: 1, text: ' 2차 저기 휴가(정기)', checked: false },
+        { id: 2, text: ' 3차 저기 휴가(정기)', checked: false },
+        { id: 3, text: ' 생활 반장 (포상)', checked: false },
+        { id: 4, text: ' 외출 외박 미실시(위로)', checked: false }
       ]
     }
 
@@ -37,9 +39,22 @@ class Home extends React.Component {
           })
         });
         //데이터 전송
-        fetch('/api')
-            .then(res=>res.json())
-            .then(data=>this.setState({username:data.username}));
+        console.log(this.state.input)
+        try{
+          axios.post("https://web-militaryvacationsystem-parkchanhee-455px95j3p75-3001.githubpreview.dev/test",{
+            test : this.state.input,
+            result : "success"
+          })
+          .then(function (response) {
+            // response  
+          }).catch(function (error) {
+              // 오류발생시 실행
+          }).then(function() {
+              // 항상 실행
+          });
+        }catch{
+          console.log("실패..")
+        }
       }
       
     
