@@ -5,6 +5,7 @@ import Header from 'components/Header';
 import HomeDetail from 'components/HomeDetail';
 import Form from 'components/Form';
 import TodoItemList from 'components/TodoItemList';
+import Sidebar from 'components/sidebar';
 class Home extends React.Component {
 
     id = 5 // 이미 0,1,2 가 존재하므로 3으로 설정
@@ -105,6 +106,7 @@ class Home extends React.Component {
         return (
             <Fragment>
                 <Header />
+                <Sidebar/>
                 <HomeDetail form={(
                   <Form 
                     value={input}
