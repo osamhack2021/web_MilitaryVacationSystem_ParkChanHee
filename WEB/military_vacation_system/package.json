@@ -15,6 +15,7 @@
     "headroom.js": "0.11.0",
     "http-proxy-middleware": "^2.0.1",
     "moment": "^2.29.1",
+    "mysql": "^2.18.1",
     "node-sass": "4.13.1",
     "nouislider": "14.1.1",
     "react": "^17.0.2",
@@ -52,5 +53,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://web-militaryvacationsystem-parkchanhee-455px95j3p75-3001.githubpreview.dev/"
 }
