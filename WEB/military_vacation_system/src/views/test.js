@@ -5,7 +5,6 @@ import Header from 'components/Header';
 import HomeDetail from 'components/HomeDetail';
 import Form from 'components/Form';
 import TodoItemList from 'components/TodoItemList';
-import Sidebar from 'components/sidebar';
 class Home extends React.Component {
 
     id = 5 // 이미 0,1,2 가 존재하므로 3으로 설정
@@ -14,8 +13,8 @@ class Home extends React.Component {
       input: '',
       todos: [
         { id: 0, text: ' 1차 정기 휴가(정기)', checked: true },
-        { id: 1, text: ' 2차 정기 휴가(정기)', checked: false },
-        { id: 2, text: ' 3차 정기 휴가(정기)', checked: false },
+        { id: 1, text: ' 2차 저기 휴가(정기)', checked: false },
+        { id: 2, text: ' 3차 저기 휴가(정기)', checked: false },
         { id: 3, text: ' 생활 반장 (포상)', checked: false },
         { id: 4, text: ' 외출 외박 미실시(위로)', checked: false }
       ]
@@ -106,7 +105,6 @@ class Home extends React.Component {
         return (
             <Fragment>
                 <Header />
-                <Sidebar/>
                 <HomeDetail form={(
                   <Form 
                     value={input}
