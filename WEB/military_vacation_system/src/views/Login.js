@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
-import { Redirect, useHistory } from 'react-router-dom';
 
 import Header from 'components/Header.js';
 
@@ -61,9 +60,11 @@ class Login extends Component {
                     <Button color='primary' onClick={() => this.handleChoose('navy')} active={this.militaryClass==='navy'}>해군/해병대</Button>
                     <Button color='primary' onClick={() => this.handleChoose('airForce')} active={this.militaryClass==='airForce'}>공군</Button>
                 </ButtonGroup>
-                <form>
-                    <input type='id' name='id' onChange={this.handleChange} value={this.state.id} placeholder='군번'/>
-                    <input type='password' name='password' onChange={this.handleChange} value={this.state.password} placeholder='비밀번호'/>
+                <form className='form'>
+                    <div className='block'>
+                        <input type='id' name='id' onChange={this.handleChange} value={this.state.id} placeholder='군번'/>
+                        <input type='password' name='password' onChange={this.handleChange} value={this.state.password} placeholder='비밀번호'/>
+                    </div>
                 </form>
                 <div>
                     <Button color='primary' onClick={this.authAdmin}>로그인</Button>

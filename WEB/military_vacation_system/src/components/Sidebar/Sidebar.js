@@ -20,7 +20,7 @@ const Sidebar = ({ value, onChange, onCreate, onKeyPress }) => {
           </Form.Select>
           <Form.Control className="mb1" type="text" id="DogNum" placeholder="군(순)번 입력" />
           <Form.Control className="mb2" type="password" id="Pw" placeholder="비밀번호 입력" />
-          
+        
         </Form.Group>
           <Button className="col-2 w60" variant="primary" onClick={Login}>
             로그인
