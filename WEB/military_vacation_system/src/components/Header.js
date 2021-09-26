@@ -7,7 +7,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <nav class="navbar navbar-dark bg-primary" style={{ height: 20 }}></nav>
+        <nav className="navbar navbar-dark bg-primary" style={{ height: 20 }}></nav>
         <Navbar color="light" light expand="xs" className="border-bottom border-gray bg-white" style={{ height: 100 }}>
 
           <Container>

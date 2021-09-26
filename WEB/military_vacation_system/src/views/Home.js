@@ -18,8 +18,8 @@ class Home extends React.Component {
       input: '',
       todos: [
         { id: 0, text: ' 1차 정기 휴가(정기)', checked: true },
-        { id: 1, text: ' 2차 저기 휴가(정기)', checked: false },
-        { id: 2, text: ' 3차 저기 휴가(정기)', checked: false },
+        { id: 1, text: ' 2차 정기 휴가(정기)', checked: false },
+        { id: 2, text: ' 3차 정기 휴가(정기)', checked: false },
         { id: 3, text: ' 생활 반장 (포상)', checked: false },
         { id: 4, text: ' 외출 외박 미실시(위로)', checked: false }
       ]
