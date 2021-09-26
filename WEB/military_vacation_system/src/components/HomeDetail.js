@@ -3,7 +3,7 @@ import './TodoListTemplate.css';
 
 const HomeDetail = ({form, children}) => {
     return (
-      <main className="todo-list-template">
+      <main id="AddVacation" className="todo-list-template" style={{display:'none'}}>
         <div className="title">
           휴가 등록
         </div>

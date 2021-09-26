@@ -110,9 +110,9 @@ class Home extends React.Component {
         return (
             <Fragment>
                 <Header />
-                <Container>
+                <section className="f">
                 <Sidebar/>
-                <div className="col-9">
+                <div className="col-10 p05">
                 <Navs/>
                 <HomeDetail form={(
                   <Form 
@@ -125,7 +125,7 @@ class Home extends React.Component {
                     <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
                 </HomeDetail>
                 </div>
-                </Container>
+                </section>
             </Fragment>
         )
     };
