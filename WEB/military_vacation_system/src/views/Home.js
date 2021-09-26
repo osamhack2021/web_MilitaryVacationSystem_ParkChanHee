@@ -6,6 +6,9 @@ import HomeDetail from 'components/HomeDetail';
 import Form from 'components/Form';
 import TodoItemList from 'components/TodoItemList';
 import Sidebar from 'components/sidebar';
+import { Container } from 'reactstrap';
+import { Nav } from 'react-bootstrap';
+
 class Home extends React.Component {
 
     id = 5 // 이미 0,1,2 가 존재하므로 3으로 설정
@@ -106,7 +109,25 @@ class Home extends React.Component {
         return (
             <Fragment>
                 <Header />
+                <Container style={{display : "flex", marginTop}}>
                 <Sidebar/>
+                <div className="col-9">
+                <Nav fill variant="tabs" defaultActiveKey="/home">
+                  <Nav.Item>
+                    <Nav.Link href="/home">휴가 신청</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="link-1">휴가 등록</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="link-2">현황</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="disabled" disabled>
+                      Disabled
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
                 <HomeDetail form={(
                   <Form 
                     value={input}
@@ -117,6 +138,8 @@ class Home extends React.Component {
                 )}>
                     <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
                 </HomeDetail>
+                </div>
+                </Container>
             </Fragment>
         )
     };
