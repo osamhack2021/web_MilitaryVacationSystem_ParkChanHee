@@ -5,9 +5,10 @@ import Header from 'components/Header';
 import HomeDetail from 'components/HomeDetail';
 import Form from 'components/Form';
 import TodoItemList from 'components/TodoItemList';
-import Sidebar from 'components/sidebar';
+import Sidebar from 'components/Sidebar/Sidebar';
+import Navs from 'components/Navs/Navs';
 import { Container } from 'reactstrap';
-import { Nav } from 'react-bootstrap';
+
 
 class Home extends React.Component {
 
@@ -109,25 +110,10 @@ class Home extends React.Component {
         return (
             <Fragment>
                 <Header />
-                <Container style={{display : "flex", marginTop}}>
+                <Container>
                 <Sidebar/>
                 <div className="col-9">
-                <Nav fill variant="tabs" defaultActiveKey="/home">
-                  <Nav.Item>
-                    <Nav.Link href="/home">휴가 신청</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="link-1">휴가 등록</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="link-2">현황</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="disabled" disabled>
-                      Disabled
-                    </Nav.Link>
-                  </Nav.Item>
-                </Nav>
+                <Navs/>
                 <HomeDetail form={(
                   <Form 
                     value={input}
