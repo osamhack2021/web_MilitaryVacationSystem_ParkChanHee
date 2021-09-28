@@ -25,6 +25,26 @@ app.get('/', (req, res) =>{
     res.send('익스프레스 3001포트')
 })
 
+app.post("/login", (req,res) =>{
+    console.log('리액트에서 로그인 접근 성공!')
+    const loginfo = req.body;
+    connection.query("SELECT * FROM USER",
+    function(err,rows,fields){
+        if(err){
+            console.log('데이터 가져오기 실패');
+            // console.log(err);
+        }else{
+            console.log('데이터 가져오기 성공');
+            console.log(rows);
+            const resData = rows.filter((row)=>{
+                return row.DogNumber == loginfo.DogNum;
+            });
+            res.send(resData);
+        };
+    });
+    connection.end();
+});
+
 app.post("/test", (req,res) =>{
     console.log('리액트에서 접근 성공!')
     const test = req.body.test;
@@ -38,6 +58,7 @@ app.post("/test", (req,res) =>{
             // console.log(rows);
         };
     });
+    connection.end();
 });
 
 app.listen(port, ()=>{
