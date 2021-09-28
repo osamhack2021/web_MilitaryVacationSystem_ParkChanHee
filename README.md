@@ -43,7 +43,7 @@ $ yarn start or npm run start
 [https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017](https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017)
 
  편한 마크다운 에디터를 찾아서 사용
- 샘플 에디터 [https://stackedit.io/app#](https://calyfactory.github.io/%EC%88%9C%EC%88%98-react.js%EB%A1%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/) [ㅡㅡ](https://coding-hyeok.tistory.com/21?category=842997)
+ 샘플 에디터 [https://stackedit.io/app#](https://www.daleseo.com/react-router-authentication/)
  
 ## 팀 정보 (Team Information)
 - 박찬희 (qkrcksgml56@naver.com), Github Id: pch720
