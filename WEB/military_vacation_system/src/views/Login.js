@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
 
-import Header from 'components/Header.js';
+import Header from 'components/Navs/Header.js';
 
 //테스트용
 const administrator = {

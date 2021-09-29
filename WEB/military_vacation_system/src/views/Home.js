@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import axios from 'axios';
 
-import Header from 'components/Header';
-import HomeDetail from 'components/HomeDetail';
-import Form from 'components/Form';
-import TodoItemList from 'components/TodoItemList';
+import Header from 'components/Navs/Header';
+import VacationList from 'components/VacationList/VacationList';
+import AddVac from 'components/AddVac/AddVac';
+import VacItemList from 'components/VacationList/VacItemList';
 import Sidebar from 'components/Sidebar/Sidebar';
 import Navs from 'components/Navs/Navs';
-import { Container } from 'reactstrap';
 
 
 class Home extends React.Component {
@@ -114,16 +113,16 @@ class Home extends React.Component {
                 <Sidebar/>
                 <div className="col-10 p05">
                 <Navs/>
-                <HomeDetail form={(
-                  <Form 
+                <VacationList addVac={(
+                  <AddVac 
                     value={input}
                     onKeyPress={handleKeyPress}
                     onChange={handleChange}
                     onCreate={handleCreate}
                   />
                 )}>
-                    <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
-                </HomeDetail>
+                    <VacItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
+                </VacationList>
                 </div>
                 </section>
             </Fragment>

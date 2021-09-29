@@ -1,14 +1,14 @@
 import React from 'react';
-import './TodoListTemplate.css';
+import './VacationList.css';
 
-const HomeDetail = ({form, children}) => {
+const VacationList = ({addVac, children}) => {
     return (
-      <main id="AddVacation" className="todo-list-template" style={{display:'none'}}>
+      <main id="VacationList" className="Vacation-list" style={{display:'none'}}>
         <div className="title">
-          휴가 등록
+          휴가 목록
         </div>
         <section className="form-wrapper">
-          {form}
+          {addVac}
         </section>
         <section className="todos-wrapper">
           { children }
@@ -17,4 +17,4 @@ const HomeDetail = ({form, children}) => {
     );
   };
   
-  export default HomeDetail; 
+  export default VacationList; 

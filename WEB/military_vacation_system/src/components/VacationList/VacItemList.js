@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TodoItem from './TodoItem';
+import GetVacations from './GetVacations';
 
-class TodoItemList extends Component {
+class VacItemList extends Component {
   
   shouldComponentUpdate(nextProps, nextState) {
     return this.props.todos !== nextProps.todos;
@@ -12,7 +12,7 @@ class TodoItemList extends Component {
 
     const todoList =todos.map(
       (todos) => (
-        <TodoItem
+        <GetVacations
           {...todos}
           onToggle={onToggle}
           onRemove={onRemove}
@@ -29,4 +29,4 @@ class TodoItemList extends Component {
   }
 }
 
-export default TodoItemList;
+export default VacItemList;

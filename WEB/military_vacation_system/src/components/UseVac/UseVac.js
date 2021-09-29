@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Badge, Container, Row, Col } from 'reactstrap';
 
-class Contents extends Component {
+class UseVac extends Component {
     render() {
         return (
             <main className="my-5 py-5">
@@ -21,7 +21,7 @@ class Contents extends Component {
                                     <span className="d-block pb-4 h2 text-dark border-bottom border-gray">React Project</span>
 
                                     <article className="pt-5 text-secondary text-justify" style={{ fontSize: '0.9rem', whiteSpace: 'pre-line' }}>
-                                        React를 이용한 포트플리오 프로젝트입니다.
+                                        UUUUUUUUUUUsevac
                                     </article>
 
                                 </div>
@@ -34,4 +34,4 @@ class Contents extends Component {
     }
 }
 
-export default Contents;
+export default UseVac;
