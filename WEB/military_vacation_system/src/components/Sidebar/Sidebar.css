@@ -23,3 +23,6 @@
 .p05{
     padding: 0 50px;
 }
+.min1000{
+    min-width: 1000px;
+}

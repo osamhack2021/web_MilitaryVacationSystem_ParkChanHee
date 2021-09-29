@@ -5,20 +5,31 @@ import './Sidebar.css';
 const Sidebar = ({ value, onChange, onCreate, onKeyPress }) => {
 
   const Login=()=>{
-    try{
-      axios.post("/login",{
-        Kinds : document.getElementById('Kinds').value,
-        DogNum : document.getElementById('DogNum').value,
-        Pw : document.getElementById('Pw').value
-      })
-      .then(function (response) {
-        console.log(response.data);
-        alert(response.data[0].Name+"님 반갑습니다.");  
-      }).catch(function (error) {
-          // 오류발생시 실행
-      })
-    }catch{
-      console.log("실패..")
+    if(document.getElementById('DogNum').value==='')
+      alert('군(순)번을 입력해주세요.')
+    else if(document.getElementById('Pw').value==='')
+      alert('비밀번호를 입력해주세요.')
+    else{
+      try{
+        axios.post("/login",null, {
+          params: {
+            'Kinds' : document.getElementById('Kinds').value,
+            'DogNum' : document.getElementById('DogNum').value,
+            'Pw' : document.getElementById('Pw').value
+          }
+        })
+        .then(function (response) {
+          if(response.data.msg==null)
+            alert("로그인 성공!!")
+          else
+            alert(response.data.msg)
+          //sessionStorage.setItem('Loginfo', response.data)
+        }).catch(function (error) {
+            // 오류발생시 실행
+        })
+      }catch{
+        console.log("실패..")
+      }
     }
   }
   return (
@@ -41,7 +52,7 @@ const Sidebar = ({ value, onChange, onCreate, onKeyPress }) => {
             로그인
           </Button>
           </div>
-          <Button className="col-12 mw195" variant="secondary" type="submit">
+          <Button className="col-12 mw195" variant="secondary">
             비밀번호 초기화
           </Button>
       </Form>

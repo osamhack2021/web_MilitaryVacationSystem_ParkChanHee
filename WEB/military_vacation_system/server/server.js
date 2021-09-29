@@ -26,23 +26,34 @@ app.get('/', (req, res) =>{
 })
 
 app.post("/login", (req,res) =>{
-    console.log('리액트에서 로그인 접근 성공!')
-    const loginfo = req.body;
-    connection.query("SELECT * FROM USER",
-    function(err,rows,fields){
-        if(err){
-            console.log('데이터 가져오기 실패');
-            // console.log(err);
-        }else{
-            console.log('데이터 가져오기 성공');
-            console.log(rows);
-            const resData = rows.filter((row)=>{
-                return row.DogNumber == loginfo.DogNum;
-            });
-            res.send(resData);
-        };
-    });
-    connection.end();
+    const loginfo = req.query;
+    connection.query('SELECT COUNT(*) AS result FROM USER WHERE DogNumber = ?',loginfo.DogNum, (err, data) => {
+        if(!err) {
+            if(data[0].result < 1) {
+                res.send({ 'msg': '등록되지 않은 군(순)번입니다.'})
+            } else { 
+                const logquery = `SELECT * FROM USER WHERE DogNumber = ? AND PassWord = ? AND Kinds = ?`;
+                // sql 란에 필요한 parameter 값을 순서대로 기재
+                const params = [loginfo.DogNum, loginfo.Pw, loginfo.Kinds]
+                connection.query(logquery, params, (err, data) => {
+                    if(!err) {
+                        try{
+                            if(data[0]==null)
+                                res.send({ 'msg': '비밀번호를 다시 확인해주십시오.'})
+                            else
+                                res.send(data[0])
+                        }catch{
+                            console.error();
+                        }
+                    } else {
+                        res.send(err)
+                    }
+                })
+            }
+        } else {
+            res.send(err)
+        }
+    })
 });
 
 app.post("/test", (req,res) =>{
@@ -58,7 +69,6 @@ app.post("/test", (req,res) =>{
             // console.log(rows);
         };
     });
-    connection.end();
 });
 
 app.listen(port, ()=>{

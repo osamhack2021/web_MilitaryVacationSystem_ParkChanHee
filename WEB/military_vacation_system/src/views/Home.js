@@ -109,7 +109,7 @@ class Home extends React.Component {
         return (
             <Fragment>
                 <Header />
-                <section className="f">
+                <section className="f min1000">
                 <Sidebar/>
                 <div className="col-10 p05">
                 <Navs/>
