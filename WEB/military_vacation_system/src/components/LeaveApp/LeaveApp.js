@@ -3,9 +3,10 @@ import { Button, Form, Col, Row, } from 'react-bootstrap';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
-import 'components/LeaveApp/LeaveApp.css';
+import './LeaveApp.css';
 
 // date 형식 변환 for 'date의 min값'
+// 마찬가지로 말일 관련 문제 발생 가능성 존재
 let date = new Date();
 let minDate = dateFormat(date);
 
@@ -19,7 +20,7 @@ function dateFormat(date) {
     return date.getFullYear() + '-' + month + '-' + day;
 }
 
-// for 'id'
+// 'id'로 사용 목적
 let count = 2;
 
 class LeaveApplication extends Component {
@@ -35,30 +36,34 @@ class LeaveApplication extends Component {
     addEvents = () => {
         const { events } = this.state;
 
-        let firstDay = document.getElementById("VacStart").value;
-        let lastDay = document.getElementById("VacEnd").value;
+        let firstDay = document.getElementById("VacStart");
+        let lastDay = document.getElementById("VacEnd");
 
-        if (Number(firstDay.slice(5,7)) > Number(lastDay.slice(5,7))) {
+        // 달이 바뀔 때의 corner case 수정 필요
+
+        if (Number(firstDay.value.slice(5,7)) > Number(lastDay.value.slice(5,7))) {
             alert("복귀일이 시작일보다 빠를 수 없습니다.");
             return;
         }
 
-        if (Number(firstDay.slice(8,10)) > Number(lastDay.slice(8,10))) {
+        if (Number(firstDay.value.slice(8,10)) > Number(lastDay.value.slice(8,10))) {
             alert("복귀일이 시작일보다 빠를 수 없습니다.");
             return;
         }
 
         let event = {
             id: count++,
-            start: firstDay,
-            end: lastDay,
+            // title 추가 필요
+            start: firstDay.value,
+            end: lastDay.value,
         };
 
         this.setState({
             events: [...events, event]
         });
 
-        console.log(firstDay + "    " + lastDay);
+        firstDay.value='';
+        lastDay.value='';
     }
 
     shouldComponentUpdate = (prevProps, nextState) => {
