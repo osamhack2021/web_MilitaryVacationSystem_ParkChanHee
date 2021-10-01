@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import axios from 'axios';
 
 import Header from 'components/Navs/Header';
+import UseVac from 'components/UseVac/UseVac';
 import VacationList from 'components/VacationList/VacationList';
 import AddVac from 'components/AddVac/AddVac';
 import VacItemList from 'components/VacationList/VacItemList';
@@ -109,7 +110,22 @@ class Home extends React.Component {
           handleRemove
         } = this;
         let isLogin = sessionStorage.getItem('Auth');
-       
+        const Contents ={
+          AddVac : 
+              <VacationList addVac={(
+                <AddVac 
+                  value={input}
+                  onKeyPress={handleKeyPress}
+                  onChange={handleChange}
+                  onCreate={handleCreate}
+                />
+              )}>
+                  <VacItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
+              </VacationList>,
+          UseVac : <UseVac/>,
+          Status: <p>개발중</p>
+        }
+        let stating ='UseVac';
         return (
             <Fragment>
                 <Header />
