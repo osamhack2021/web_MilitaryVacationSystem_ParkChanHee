@@ -137,16 +137,9 @@ class Home extends React.Component {
                 <div className="col-10 p05">
                 <Navs/>
                 <LeaveApp />
-                <VacationList addVac={(
-                  <AddVac 
-                    value={input}
-                    onKeyPress={handleKeyPress}
-                    onChange={handleChange}
-                    onCreate={handleCreate}
-                  />
-                )}>
-                    <VacItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
-                </VacationList>
+                {
+                  Contents[stating]
+                }
                 </div>
                 </section>
             </Fragment>

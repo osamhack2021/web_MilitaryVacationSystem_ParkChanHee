@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav } from 'react-bootstrap';
 
 const handleSelect = (eventKey) => {
-  switch (eventKey) {
+  /*switch (eventKey) {
     case '1':
       document.getElementById('LeaveApp').style.display='contents';
       document.getElementById('VacationList').style.display='none';
@@ -18,7 +18,7 @@ const handleSelect = (eventKey) => {
     default:
       document.getElementById('VacationList').style.display='none';
       document.getElementById('LeaveApp').style.display='none';
-  }
+  }*/
 
 };
 
