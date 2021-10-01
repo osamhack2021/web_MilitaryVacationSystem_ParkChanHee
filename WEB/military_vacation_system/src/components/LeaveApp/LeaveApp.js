@@ -19,13 +19,17 @@ function dateFormat(date) {
     return date.getFullYear() + '-' + month + '-' + day;
 }
 
+// for 'id'
+let count = 2;
+
 class LeaveApplication extends Component {
     state = {
         events: [{
-            id: '1',
+            id: 1,
+            title: '테스트',
             start: '2021-10-5',
             end: '2021-10-9'
-        }],
+            }]
     }
 
     addEvents = () => {
@@ -34,17 +38,34 @@ class LeaveApplication extends Component {
         let firstDay = document.getElementById("VacStart").value;
         let lastDay = document.getElementById("VacEnd").value;
 
-        let temp = {
-            id: '',
-            start: {firstDay},
-            end: {lastDay},
+        if (Number(firstDay.slice(5,7)) > Number(lastDay.slice(5,7))) {
+            alert("복귀일이 시작일보다 빠를 수 없습니다.");
+            return;
+        }
+
+        if (Number(firstDay.slice(8,10)) > Number(lastDay.slice(8,10))) {
+            alert("복귀일이 시작일보다 빠를 수 없습니다.");
+            return;
+        }
+
+        let event = {
+            id: count++,
+            start: firstDay,
+            end: lastDay,
         };
 
         this.setState({
-            events: [...events, temp]
+            events: [...events, event]
         });
 
-        console.log("이벤트 추가");
+        console.log(firstDay + "    " + lastDay);
+    }
+
+    shouldComponentUpdate = (prevProps, nextState) => {
+        if (this.state !== nextState) {
+            return true;
+        }
+        return false;
     }
 
     render() {
@@ -67,12 +88,12 @@ class LeaveApplication extends Component {
                     </Form>
                     <Button onClick={this.addEvents}>신청</Button>
                 </div>
-                <div className='col-lg-6'>
+                <div className='col-lg-8'>
                     <Row>
                         <FullCalendar
-                            defaultView="dayGridMonth"
+                            initialView="dayGridMonth"
                             plugins={[ dayGridPlugin ]}
-                            events={this.state}
+                            events={this.state.events}
                         />
                     </Row>
                 </div>
