@@ -12,11 +12,6 @@
     min-width: 193px;
     padding-left: 20px;
 }
-.w60{
-    width: 60px;
-    height: 118px;
-    padding: 1%;
-}
 .mw195{
     min-width: 195px;
 }
@@ -25,4 +20,14 @@
 }
 .min1000{
     min-width: 1000px;
+}
+.badge{
+    width: 36px;
+    margin: 2px 12px;
+}
+.UInfo{
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 5px;
+    height: 85px;
+    padding-top: 5px;
 }
