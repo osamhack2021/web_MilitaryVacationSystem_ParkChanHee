@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import axios from 'axios';
 
 import Header from 'components/Navs/Header';
 import VacationList from 'components/VacationList/VacationList';
 import AddVac from 'components/AddVac/AddVac';
 import VacItemList from 'components/VacationList/VacItemList';
+import Login from 'components/Sidebar/Login';
 import Sidebar from 'components/Sidebar/Sidebar';
 import Navs from 'components/Navs/Navs';
 
 
 class Home extends React.Component {
-
+  
     id = 5 // 이미 0,1,2 가 존재하므로 3으로 설정
 
     state = {
@@ -95,6 +96,7 @@ class Home extends React.Component {
           todos: todos.filter(todo => todo.id !== id)
         });
       }
+      
 
       render() {
         const { input, todos } = this.state;
@@ -105,12 +107,16 @@ class Home extends React.Component {
           handleToggle,
           handleRemove
         } = this;
-
+        let isLogin = sessionStorage.getItem('Auth');
+       
         return (
             <Fragment>
                 <Header />
                 <section className="f min1000">
-                <Sidebar/>
+                  {isLogin == null
+                    ?<Login/>
+                    :<Sidebar/>
+                  }
                 <div className="col-10 p05">
                 <Navs/>
                 <VacationList addVac={(

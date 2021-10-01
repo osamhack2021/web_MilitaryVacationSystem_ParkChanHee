@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment} from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
 
 import Header from 'components/Navs/Header.js';

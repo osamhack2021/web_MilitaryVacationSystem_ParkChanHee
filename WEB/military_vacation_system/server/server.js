@@ -3,6 +3,7 @@ const cors = require("cors");
 const mysql = require("mysql");
 const app = express() 
 const port = 3001
+let requestIp = require('request-ip');
 
 var connection = mysql.createConnection({
     host : "localhost",
@@ -40,8 +41,11 @@ app.post("/login", (req,res) =>{
                         try{
                             if(data[0]==null)
                                 res.send({ 'msg': '비밀번호를 다시 확인해주십시오.'})
-                            else
+                            else{
+                                data[0].ClientIP = requestIp.getClientIp(req);
+                                console.log(data[0])
                                 res.send(data[0])
+                            }
                         }catch{
                             console.error();
                         }
