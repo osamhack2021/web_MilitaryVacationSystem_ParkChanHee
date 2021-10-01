@@ -7,6 +7,7 @@ import AddVac from 'components/AddVac/AddVac';
 import VacItemList from 'components/VacationList/VacItemList';
 import Sidebar from 'components/Sidebar/Sidebar';
 import Navs from 'components/Navs/Navs';
+import LeaveApp from 'components/LeaveApp/LeaveApp';
 
 
 class Home extends React.Component {
@@ -113,6 +114,7 @@ class Home extends React.Component {
                 <Sidebar/>
                 <div className="col-10 p05">
                 <Navs/>
+                <LeaveApp />
                 <VacationList addVac={(
                   <AddVac 
                     value={input}

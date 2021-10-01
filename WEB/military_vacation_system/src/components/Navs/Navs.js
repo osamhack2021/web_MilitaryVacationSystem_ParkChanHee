@@ -2,18 +2,24 @@ import React from 'react';
 import { Nav } from 'react-bootstrap';
 
 const handleSelect = (eventKey) => {
+  document.getElementById('LeaveApp').style.display='contents';
+  document.getElementById('VacationList').style.display='none';
   switch (eventKey) {
     case '1':
+      document.getElementById('LeaveApp').style.display='contents';
       document.getElementById('VacationList').style.display='none';
       break;
     case '2':
       document.getElementById('VacationList').style.display='contents';
+      document.getElementById('LeaveApp').style.display='none';
       break;
     case '3':
       document.getElementById('VacationList').style.display='none';
+      document.getElementById('LeaveApp').style.display='none';
       break;
     default:
       document.getElementById('VacationList').style.display='none';
+      document.getElementById('LeaveApp').style.display='none';
   }
 
 };
