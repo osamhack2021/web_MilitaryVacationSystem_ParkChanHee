@@ -3,7 +3,7 @@ import './VacationList.css';
 
 const VacationList = ({addVac, children}) => {
     return (
-      <main id="VacationList" className="Vacation-list" style={{display:'none'}}>
+      <main id="VacationList" className="Vacation-list" style={{ display:'contents' }}>
         <div className="title">
           휴가 목록
         </div>
