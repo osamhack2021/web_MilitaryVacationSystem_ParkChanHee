@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React from 'react';
 import { Nav } from 'react-bootstrap';
 
 import UseVac from 'components/UseVac/UseVac';
