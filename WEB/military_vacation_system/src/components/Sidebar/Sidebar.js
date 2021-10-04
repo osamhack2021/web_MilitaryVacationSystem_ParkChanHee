@@ -48,7 +48,7 @@ class Sidebar extends React.Component  {
             </Badge>{loginfo.Name}  ({classes})<br/>
             <Badge pill bg="info">
               DN
-            </Badge>{loginfo.DogNumber}
+            </Badge>{loginfo.DogNumber}<br/>
             <Badge pill bg="info">
               IP
             </Badge>{loginfo.ClientIP}
@@ -57,7 +57,7 @@ class Sidebar extends React.Component  {
               로그아웃
             </Button>
             <Button className="col-12 mw195" variant="secondary">
-              비밀번호 초기화
+              비밀번호 변경
             </Button>
         </Form>
       </div>

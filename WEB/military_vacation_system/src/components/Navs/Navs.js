@@ -21,51 +21,6 @@ class Navs extends React.Component {
       Stating : 'UseVac' 
     }
 
-      handleChange = (e) => {
-          this.setState({
-            input: e.target.value // input 의 다음 바뀔 값
-          });
-        }
-    
-      handleCreate = () => {
-        
-        const { input, todos } = this.state;
-        this.setState({
-          input: '', // 인풋 비우고
-          // concat 을 사용하여 배열에 추가
-          todos: todos.concat({
-            id: this.id++,
-            text: input,
-            checked: false
-          })
-        });
-        //데이터 전송
-        console.log(this.state.input)
-        try{
-          axios.post("/test",{
-            test : this.state.input,
-            result : "success"
-          })
-          .then(function (response) {
-            // response  
-          }).catch(function (error) {
-              // 오류발생시 실행
-          }).then(function() {
-              // 항상 실행
-          });
-        }catch{
-          console.log("실패..")
-        }
-      }
-      
-    
-      handleKeyPress = (e) => {
-        // 눌려진 키가 Enter 면 handleCreate 호출
-        if(e.key === 'Enter') {
-          this.handleCreate();
-        }
-      }
-
       handleToggle = (id) => {
         const { todos } = this.state;
     
@@ -111,9 +66,6 @@ class Navs extends React.Component {
   render() {
     const { input, todos, Stating } = this.state;
         const {
-          handleChange,
-          handleCreate,
-          handleKeyPress,
           handleToggle,
           handleRemove,
           handleSelect
@@ -123,12 +75,7 @@ class Navs extends React.Component {
       UseVac : <UseVac/>,
       AddVac : 
           <VacationList addVac={(
-            <AddVac 
-              value={input}
-              onKeyPress={handleKeyPress}
-              onChange={handleChange}
-              onCreate={handleCreate}
-            />
+            <AddVac/>
           )}>
               <VacItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
           </VacationList>,

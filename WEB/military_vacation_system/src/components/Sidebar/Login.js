@@ -10,7 +10,6 @@ const Login = ({ value, onChange, onCreate, onKeyPress }) => {
     else if(document.getElementById('Pw').value==='')
       alert('비밀번호를 입력해주세요.')
     else{
-      try{
         axios.post("/login",null, {
           params: {
             'Kinds' : document.getElementById('Kinds').value,
@@ -36,9 +35,11 @@ const Login = ({ value, onChange, onCreate, onKeyPress }) => {
         }).catch(function (error) {
             // 오류발생시 실행
         })
-      }catch{
-        console.log("실패..")
-      }
+    }
+  }
+  const LKPress = (e) => {
+    if(e.key === 'Enter') {
+      Login();
     }
   }
   return (
@@ -52,8 +53,8 @@ const Login = ({ value, onChange, onCreate, onKeyPress }) => {
             <option value="국직공무원">국직공무원</option>
             <option value="공무원">공무원</option>
           </Form.Select>
-          <Form.Control className="mb1" type="text" id="DogNum" placeholder="군(순)번 입력" />
-          <Form.Control className="mb2" type="password" id="Pw" placeholder="비밀번호 입력" />
+          <Form.Control className="mb1" type="text" id="DogNum" placeholder="군(순)번 입력" onKeyPress={LKPress}/>
+          <Form.Control className="mb2" type="password" id="Pw" placeholder="비밀번호 입력" onKeyPress={LKPress}/>
           <Button className="col-12 mb2" variant="primary" onClick={Login}>
             로그인
           </Button>
