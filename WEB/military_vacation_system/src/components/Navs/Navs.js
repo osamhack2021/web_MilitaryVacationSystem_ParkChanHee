@@ -4,49 +4,13 @@ import { Nav } from 'react-bootstrap';
 import UseVac from 'components/UseVac/UseVac';
 import VacationList from 'components/VacationList/VacationList';
 import AddVac from 'components/AddVac/AddVac';
-import VacItemList from 'components/VacationList/VacItemList';
 
 class Navs extends React.Component {
   id = 5 // 이미 0,1,2 가 존재하므로 3으로 설정
 
     state = {
-      input: '',
-      todos: [
-        { id: 0, text: ' 1차 정기 휴가(정기)', checked: true },
-        { id: 1, text: ' 2차 정기 휴가(정기)', checked: false },
-        { id: 2, text: ' 3차 정기 휴가(정기)', checked: false },
-        { id: 3, text: ' 생활 반장 (포상)', checked: false },
-        { id: 4, text: ' 외출 외박 미실시(위로)', checked: false }
-      ],
       Stating : 'UseVac' 
     }
-
-      handleToggle = (id) => {
-        const { todos } = this.state;
-    
-        // 파라미터로 받은 id 를 가지고 몇번째 아이템인지 찾습니다.
-        const index = todos.findIndex(todo => todo.id === id);
-        const selected = todos[index]; // 선택한 객체
-    
-        const nextTodos = [...todos]; // 배열을 복사
-    
-        // 기존의 값들을 복사하고, checked 값을 덮어쓰기
-        nextTodos[index] = { 
-          ...selected, 
-          checked: !selected.checked
-        };
-    
-        this.setState({
-          todos: nextTodos
-        });
-      }
-
-      handleRemove = (id) => {
-        const { todos } = this.state;
-        this.setState({
-          todos: todos.filter(todo => todo.id !== id)
-        });
-      }
 
       handleSelect = (eventKey) => {
         switch (eventKey) {
@@ -66,8 +30,6 @@ class Navs extends React.Component {
   render() {
     const { input, todos, Stating } = this.state;
         const {
-          handleToggle,
-          handleRemove,
           handleSelect
         } = this;
 
@@ -77,7 +39,6 @@ class Navs extends React.Component {
           <VacationList addVac={(
             <AddVac/>
           )}>
-              <VacItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
           </VacationList>,
       Status: <p>개발중</p>
     }

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Button, Modal } from "react-bootstrap";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import './AddVac.css';
 
 const AddVac = () => {
@@ -42,10 +45,10 @@ const AddVac = () => {
               </Form.Select>
               <Form.Group className="f">
                 <Form.Control className="mb1" type="text" id="VName" placeholder="휴가 이름 입력" />
-                <div className="col-4 AVDiv">
-                <Button className="AddVB" onClick={decreaseNumber}>-</Button>
+                <div className="col-5 AVDiv">
+                <Button className="AddVB" onClick={decreaseNumber}><FontAwesomeIcon icon={faMinus} /></Button>
                 {number} 일
-                <Button className="AddVB" onClick={increaseNumber}>+</Button>
+                <Button className="AddVB" onClick={increaseNumber}><FontAwesomeIcon icon={faPlus} /></Button>
                 </div>
               </Form.Group>
               <Form.Control className="mb2" type="text" id="VCount" placeholder="내용 입력" />
