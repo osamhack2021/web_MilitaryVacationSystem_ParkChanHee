@@ -21,7 +21,7 @@ const AddVac = () => {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        등록
+        휴가 등록
       </Button>
 
       <Modal
