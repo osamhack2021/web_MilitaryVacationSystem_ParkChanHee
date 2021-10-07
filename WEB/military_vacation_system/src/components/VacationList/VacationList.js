@@ -45,7 +45,7 @@ const VacationList = ({ addVac }) => {
             key={idx}
             id={`radio-${idx}`}
             type="radio"
-            variant={idx == 1 ? 'outline-warning' : (idx == 2 ?'outline-danger':'outline-success')}
+            variant={idx === 1 ? 'outline-warning' : (idx === 2 ?'outline-danger':'outline-success')}
             name="radio"
             value={radio.value}
             checked={radioValue === radio.value}

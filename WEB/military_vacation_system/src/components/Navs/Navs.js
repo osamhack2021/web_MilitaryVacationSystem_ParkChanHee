@@ -28,7 +28,7 @@ class Navs extends React.Component {
         }
       };
   render() {
-    const { input, todos, Stating } = this.state;
+    const { Stating } = this.state;
         const {
           handleSelect
         } = this;

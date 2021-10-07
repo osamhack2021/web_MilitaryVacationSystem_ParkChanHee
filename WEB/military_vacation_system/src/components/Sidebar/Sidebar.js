@@ -1,6 +1,5 @@
 import React from "react";
 import { Form, Button, Badge } from "react-bootstrap";
-import { render } from "react-dom";
 import './Sidebar.css';
 class Sidebar extends React.Component  {
   

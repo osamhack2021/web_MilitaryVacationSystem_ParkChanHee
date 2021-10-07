@@ -18,7 +18,6 @@ class Login extends Component {
 
     // 군별 선택 시 update
     handleChoose = (military) => {
-        const { militaryClass } = this.state;
         this.setState({
             militaryClass: military
         });
